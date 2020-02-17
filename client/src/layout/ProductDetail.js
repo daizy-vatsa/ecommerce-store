@@ -43,6 +43,12 @@ export default function ({ p, location }) {
                   <Row style={{ fontWeight: "bold" }}>Product Details:</Row>
                   <br />
                   <Row>{product.description}</Row>
+                  <Row>
+                    <strong>Category : </strong> {product.category}
+                  </Row>
+                  <Row>
+                    <strong>Quantity : </strong> {product.quantity}
+                  </Row>
                 </Card.Text>
                 <br />
                 <br />
@@ -50,62 +56,24 @@ export default function ({ p, location }) {
                 <br />
               </Card.Body>
               <Row className="Thumbs">
-                <Card.Img
-                  thumbnail
-                  className="thumbnail"
-                  src={product.image1}
-                />
-                <Card.Img
-                  thumbnail
-                  className="thumbnail"
-                  src={product.image2}
-                />
-                <Card.Img
-                  thumbnail
-                  className="thumbnail"
-                  src={product.image1}
-                />
+                <Col>
+                  <Card.Img className="thumbnail" src={product.image1}
+                  />
+                </Col>
+                <Col>
+                  <Card.Img className="thumbnail" src={product.image2}
+                  />
+                </Col>
+                <Col>
+                  <Card.Img className="thumbnail" src={product.image3}
+                  />
+                </Col>
               </Row>
             </Col>
           </Row>
         </Card>
       </Container>
-      <Container>
-        <Card className="MobiledetailsContainer">
-          <Card.Img
-            className="detailsImages"
-            variant="top"
-            src={product.image1}
-          />
-          <Card.Body>
-            <Card.Title>
-              <strong>{product.title}</strong>
-            </Card.Title>
-            <Card.Title>{product.price}</Card.Title>
-            <Card.Text>
-              <Row style={{ fontWeight: "bold" }}>Product Details:</Row>
-              <br />
-              <Row>{product.description}</Row>
-              <Row>
-                <strong>Category : </strong> {product.category}
-              </Row>
-              <Row>
-                <strong>Quantity : </strong> {product.quantity}
-              </Row>
-            </Card.Text>
-            <br />
-            <br />
-            <AddToCart item={product} />
-            <br />
-            <hr />
-            <Row className="Thumbs">
-              <Card.Img thumbnail className="thumbnail" src={product.image1} />
-              <Card.Img thumbnail className="thumbnail" src={product.image2} />
-              {/* <Card.Img thumbnail className="thumbnail" src={product.image3} /> */}
-            </Row>
-          </Card.Body>
-        </Card>
-      </Container>
+
       <Container className="tabsContainer">
         <Col>
           <Tabs
