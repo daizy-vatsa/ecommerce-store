@@ -22,7 +22,7 @@ const ProductCard = ({ p }) => {
   return (
     <div>
       <Card className="productCard">
-        <a href={`/product?${p._id}`}>
+        <Link to={`/product?${p._id}`}>
           <Card.ImgOverlay>
             <Card.Title className="productName">
               {p.title} – ${p.price}
@@ -34,7 +34,7 @@ const ProductCard = ({ p }) => {
             src={p.image1}
             alt="image"
           />
-        </a>
+        </Link>
         <Card.Body className="cardOpts">
           <Row>
             <Col className="cardCol">
@@ -46,11 +46,11 @@ const ProductCard = ({ p }) => {
             {/* View Details */}
             {/* </Link> */}
             <Col>
-            <div className="cardButton">
-              <Link  to={`/product?${p._id}`}>
-                View Details
+              <div className="cardButton">
+                <Link to={`/product?${p._id}`}>
+                  View Details
                 <FontAwesomeIcon icon={faEllipsisH} className="FAIcon" />
-              </Link></div>
+                </Link></div>
             </Col>
           </Row>
         </Card.Body>
