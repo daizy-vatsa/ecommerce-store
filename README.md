@@ -13,7 +13,7 @@ This template used React, MongoDB, Mongoose ORM, and customized React-Bootstrap 
 * Patrick Brown 
 
 ## Live Site on Heroku
-[Live Site](https://les-meilleurs-ecommerce.herokuapp.com/)
+. Live Site: https://ecommerc-store-paul.herokuapp.com/
 
 ![LesMeiulleurs Custom Styling Gif](https://github.com/owodu001/ecommerce/blob/master/client/src/LesMeilleuresSTYLE.gif?raw=true)
 
