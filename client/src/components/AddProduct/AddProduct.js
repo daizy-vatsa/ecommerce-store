@@ -22,7 +22,6 @@ export default function AddProduct() {
     }, [])
 
     function handleClick() {
-        // axios.post("https:// les-meilleurs.herokuapp.com/api/products/add", {
         axios.post("/api/products/add", {
             title,
             description,
@@ -59,7 +58,6 @@ export default function AddProduct() {
                         <select className="form-control" value={category} onChange={({ target }) => setCategory(target.value)}>
                             {categories.map(category => { return <option key={category} value={category}> {category}</option> })}
                         </select>
-                        <p>{category}</p>
                     </div>
 
                     <div className="form-group">
