@@ -60,7 +60,7 @@ export default function Login({ history }) {
           <button type="submit" className="btn btn-primary btn-block">Log In</button>
 
           <p className=" new text-center">
-            Are you New ? <Link to="/register">Register</Link>
+            Are you New ? <Link to="/register" style={{ color: "blue" }}>Register</Link>
           </p>
 
         </div>
