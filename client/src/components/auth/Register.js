@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import "./style.css";
 import { AuthContext } from "../../auth/auth";
 
 export default function Register({ history }) {
@@ -44,7 +45,7 @@ export default function Register({ history }) {
               value={name}
               id="name"
               type="text" className="form-control" placeholder=" Enter your name" />
-            <span>{errors.name}</span>
+            <span className="error-text">{errors.name}</span>
           </div>
 
           <div className="form-group">
@@ -54,7 +55,7 @@ export default function Register({ history }) {
               value={email}
               id="email"
               type="email" className="form-control" placeholder="Enter your email" />
-            <span>{errors.email}</span>
+            <span className="error-text">{errors.email}</span>
           </div>
 
           <div className="form-group">
@@ -63,7 +64,7 @@ export default function Register({ history }) {
               value={password}
               id="password"
               type="password" className="form-control" placeholder="Enter your password" />
-            <span>{errors.password}</span>
+            <span className="error-text">{errors.password}</span>
           </div>
           <div className="form-group">
             <label> Re-enter password</label>
@@ -71,11 +72,11 @@ export default function Register({ history }) {
               value={password2}
               id="confirmPassword"
               type="password" className="form-control" placeholder=" Re-enter your password" />
-            <span>{errors.password2}</span>
+            <span className="error-text">{errors.password2}</span>
           </div>
           <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
           <p className="forgot-password text-right">
-            Already registered? <Link to="/login">Login</Link>
+            Already registered? <Link to="/login" style={{ color: "blue" }}>Login</Link>
           </p>
         </form>
       </div>
